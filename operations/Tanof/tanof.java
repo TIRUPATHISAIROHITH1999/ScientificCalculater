@@ -1,0 +1,30 @@
+package operations.Tanof;
+
+import java.util.Scanner;
+
+import mainCalculater.*;
+
+
+
+public class tanof {
+    static Scanner sc=new Scanner(System.in);
+    public static double setsineof() {
+        double finalResult;
+        if(calculaterAll.getFinalResult()==0)
+        {
+            System.out.print("Enter the number: ");
+            double x=sc.nextDouble();
+            double y=Math.toRadians(x);
+            finalResult=Math.tan(y);
+            calculaterAll.setFinalResult(finalResult);
+        }
+        else
+        {
+            double y=Math.toRadians(calculaterAll.getFinalResult());
+            finalResult=Math.tan(y);
+            calculaterAll.setFinalResult(finalResult);
+        }
+        return finalResult;
+       
+    }
+}
